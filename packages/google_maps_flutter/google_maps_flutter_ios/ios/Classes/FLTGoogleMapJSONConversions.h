@@ -4,7 +4,7 @@
 
 #import <Flutter/Flutter.h>
 #import <Foundation/Foundation.h>
-#import <GoogleMaps/GoogleMaps.h>
+@import GoogleMaps
 @import GoogleMapsUtils;
 
 #import "messages.g.h"

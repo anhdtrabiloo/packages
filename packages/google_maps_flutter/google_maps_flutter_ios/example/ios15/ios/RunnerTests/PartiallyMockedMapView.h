@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-@import GoogleMaps;
+@import GoogleMaps
 
 /**
  * Defines a map view used for testing key-value observing.

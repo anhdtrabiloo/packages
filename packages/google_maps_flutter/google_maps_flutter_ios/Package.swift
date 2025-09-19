@@ -20,7 +20,11 @@ let package = Package(
         .product(name: "GoogleMaps", package: "ios-maps-sdk"),
         .product(name: "GoogleMapsUtils", package: "google-maps-ios-utils")
       ],
-      path: "ios"
+      path: "ios/Classes",
+      publicHeadersPath: ".",
+      cSettings: [
+          .unsafeFlags(["-fmodule-map-file=../module.modulemap"])
+      ]
     )
   ]
 )
