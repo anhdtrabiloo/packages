@@ -14,9 +14,9 @@ Downloaded by pub (not CocoaPods).
   s.author           = { 'Flutter Dev Team' => 'flutter-dev@googlegroups.com' }
   s.source           = { :http => 'https://github.com/flutter/packages/tree/main/packages/google_maps_flutter/google_maps_flutter/ios' }
   s.documentation_url = 'https://pub.dev/packages/google_maps_flutter_ios'
-  s.source_files = 'Classes/**/*.{h,m}'
-  s.public_header_files = 'Classes/**/*.h'
-  s.module_map = 'Classes/google_maps_flutter_ios.modulemap'
+  s.source_files = 'google_maps_flutter_ios/Sources/google_maps_flutter_ios/**/*.{h,m}'
+  s.public_header_files = 'google_maps_flutter_ios/Sources/google_maps_flutter_ios/include/**/*.h'
+  s.module_map = 'google_maps_flutter_ios/Sources/google_maps_flutter_ios/include/google_maps_flutter_ios.modulemap'
   s.dependency 'Flutter'
   # Allow any version up to the next breaking change after the latest version that
   # has been confirmed to be compatible via an example in examples/. See discussion
@@ -24,10 +24,10 @@ Downloaded by pub (not CocoaPods).
   # broad as possible.
   # Versions earlier than 8.4 can't be supported because that's the first version
   # that supports privacy manifests.
-  # s.dependency 'GoogleMaps', '>= 8.4', '< 10.0'
+  s.dependency 'GoogleMaps', '>= 8.4', '< 10.0'
   # Google-Maps-iOS-Utils 5.x supports GoogleMaps 8.x and iOS 14.0+
   # Google-Maps-iOS-Utils 6.x supports GoogleMaps 9.x and iOS 15.0+
-  # s.dependency 'Google-Maps-iOS-Utils', '>= 5.0', '< 7.0'
+  s.dependency 'Google-Maps-iOS-Utils', '>= 5.0', '< 7.0'
   s.static_framework = true
   s.platform = :ios, '14.0'
   # "Google-Maps-iOS-Utils" is static and contains Swift classes.
@@ -36,6 +36,7 @@ Downloaded by pub (not CocoaPods).
   s.xcconfig = {
     'LIBRARY_SEARCH_PATHS' => '$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)/ $(SDKROOT)/usr/lib/swift',
     'LD_RUNPATH_SEARCH_PATHS' => '$(inherited) /usr/lib/swift',
+    'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) FGM_USING_COCOAPODS=1'
   }
-  s.resource_bundles = {'google_maps_flutter_ios_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
+  s.resource_bundles = {'google_maps_flutter_ios_privacy' => ['google_maps_flutter_ios/Sources/google_maps_flutter_ios/Resources/PrivacyInfo.xcprivacy']}
 end

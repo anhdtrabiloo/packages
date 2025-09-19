@@ -5,7 +5,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <Flutter/Flutter.h>
 #import <Foundation/Foundation.h>
-#import <GoogleMaps/GoogleMaps.h>
+@import GoogleMaps
 #import <UIKit/UIKit.h>
 
 #import "messages.g.h"

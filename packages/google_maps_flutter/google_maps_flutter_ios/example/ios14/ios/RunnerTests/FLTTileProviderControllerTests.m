@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 @import XCTest;
-@import GoogleMaps;
+@import GoogleMaps
 @import google_maps_flutter_ios;
 
 #import <OCMock/OCMock.h>
